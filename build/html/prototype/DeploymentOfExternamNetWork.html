@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.1. DeploymentOfExternamNetWork / 项目部署外网步骤 &mdash; Note  文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="2. productSet网页修改" href="../productset/productsetchange.html" />
+    <link rel="prev" title="1. Prototypeing" href="prototypeing.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Note
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="prototypeing.html">1. Prototypeing</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.1. DeploymentOfExternamNetWork / 项目部署外网步骤</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deploymentofexternamnetwork-rst">1.1.1. 获取项目</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1.1.2. 修改页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1.1.3. 登录远程桌面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">1.1.4. 上传项目</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ui">1.1.5. 重启UI</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../productset/productsetchange.html">2. productSet网页修改</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../frame/webframe.html">3. 前端框架</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Note</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="prototypeing.html">1. Prototypeing</a> &raquo;</li>
+        
+      <li>1.1. DeploymentOfExternamNetWork / 项目部署外网步骤</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/prototype/DeploymentOfExternamNetWork.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="deploymentofexternamnetwork">
+<h1><a class="toc-backref" href="#id6">1.1. DeploymentOfExternamNetWork / 项目部署外网步骤</a><a class="headerlink" href="#deploymentofexternamnetwork" title="永久链接至标题">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2019-01-14</td>
+</tr>
+<tr class="field-even field"><th class="field-name">tags:</th><td class="field-body">node,Linux</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">authon:</th><td class="field-body">Zhang Jie</td>
+</tr>
+</tbody>
+</table>
+<div class="contents topic" id="id1">
+<p class="topic-title first">目录</p>
+<ul class="simple">
+<li><a class="reference internal" href="#deploymentofexternamnetwork" id="id6">DeploymentOfExternamNetWork / 项目部署外网步骤</a><ul>
+<li><a class="reference internal" href="#deploymentofexternamnetwork-rst" id="id7">获取项目</a></li>
+<li><a class="reference internal" href="#id3" id="id8">修改页面</a></li>
+<li><a class="reference internal" href="#id4" id="id9">登录远程桌面</a></li>
+<li><a class="reference internal" href="#id5" id="id10">上传项目</a></li>
+<li><a class="reference internal" href="#ui" id="id11">重启UI</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="deploymentofexternamnetwork-rst">
+<span id="id2"></span><h2><a class="toc-backref" href="#id7">1.1.1. 获取项目</a><a class="headerlink" href="#deploymentofexternamnetwork-rst" title="永久链接至标题">¶</a></h2>
+<p>首先从gitlab中获取login项目，地址为http://172.17.6.44/prototype/login
+这里的login项目是所有子项目的入口，目录结构如下图所示：</p>
+<div class="figure">
+<img alt="../_images/DeploymentDoc_0001.png" src="../_images/DeploymentDoc_0001.png" />
+</div>
+<p>其中主要做修改的部分为Products目录和backend目录</p>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id8">1.1.2. 修改页面</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>在Products目录下的productSet.html文件中添加子项目入口和点击事件请求，例如：</p>
+<div class="figure">
+<img alt="../_images/DeploymentDoc_0003.png" src="../_images/DeploymentDoc_0003.png" />
+</div>
+<div class="figure">
+<img alt="../_images/DeploymentDoc_0004.png" src="../_images/DeploymentDoc_0004.png" />
+</div>
+<p>其中img标签内为子项目对应的图片,应事先将需要的图片上传到Products下的img文件夹中。</p>
+<p><code class="code docutils literal notranslate"><span class="pre">window.location.assign(&quot;/OSCE/bs_index.html&quot;);</span></code> 设置子项目的首页。</p>
+<p>然后修改backend目录中moudules下的rest.js文件，添加对应的子项目相对路径，例如：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>app.use<span class="o">(</span><span class="s1">&#39;/OSCE&#39;</span>, auth<span class="o">)</span><span class="p">;</span>
+app.post<span class="o">(</span><span class="s1">&#39;/OSCE&#39;</span>, verfiyReferer<span class="o">)</span><span class="p">;</span>
+app.use<span class="o">(</span><span class="s1">&#39;/OSCE&#39;</span>, express.static<span class="o">(</span>path.join<span class="o">(</span>__dirname, <span class="s1">&#39;/../../OSCE&#39;</span><span class="o">)))</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>‘/../../OSCE”是下一步中要上传的子项目路径，到这里需要修改的部分基本完毕。</p>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id9">1.1.3. 登录远程桌面</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>首先登录至远程桌面10.14.9.61，如图:</p>
+<div class="figure">
+<img alt="../_images/DeploymentOfExternamNetWork0001.png" src="../_images/DeploymentOfExternamNetWork0001.png" />
+</div>
+<p>登录成功之后进入61主机，选择使用WinScp工具连接至10.15.133.22</p>
+<p>用户名：brian 密码：Bac8.611</p>
+<div class="figure">
+<img alt="../_images/DeploymentOfExternamNetWork0002.png" src="../_images/DeploymentOfExternamNetWork0002.png" />
+</div>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id10">1.1.4. 上传项目</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>使用WinSCP工具将项目上传至Linux对应的文件夹下，如下图所示：</p>
+<div class="figure">
+<img alt="../_images/DeploymentOfExternamNetWork0004.png" src="../_images/DeploymentOfExternamNetWork0004.png" />
+</div>
+<p>左侧为远程桌面的文件夹，右侧为Linux文件夹，在左侧选择好文件之后拖放至右侧的文件夹中,在上传之前可以选择将当前项目拷贝一份以防出错。</p>
+<p>至此，项目部署至外网步骤基本完成，但是此时网页并不能实时显示更新之后的内容，需要重新启动一次UI</p>
+</div>
+<div class="section" id="ui">
+<h2><a class="toc-backref" href="#id11">1.1.5. 重启UI</a><a class="headerlink" href="#ui" title="永久链接至标题">¶</a></h2>
+<p>还是要用到上一步中的WinSCP工具，使用工具中的PuTTY SSH终端重启UI。</p>
+<p><code class="code docutils literal notranslate"><span class="pre">pm2</span> <span class="pre">restart</span> <span class="pre">index</span></code> 重启客户UI</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../productset/productsetchange.html" class="btn btn-neutral float-right" title="2. productSet网页修改" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="prototypeing.html" class="btn btn-neutral float-left" title="1. Prototypeing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, ZhangJie
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

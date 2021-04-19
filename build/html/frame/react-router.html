@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.1. react路由 &mdash; Note  文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="3.2. React" href="react.html" />
+    <link rel="prev" title="3. 前端框架" href="webframe.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Note
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../prototype/prototypeing.html">1. Prototypeing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../productset/productsetchange.html">2. productSet网页修改</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="webframe.html">3. 前端框架</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. react路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="react.html">3.2. React</a></li>
+<li class="toctree-l2"><a class="reference internal" href="antd-theme.html">3.3. antd修改主题颜色及公用部分</a></li>
+<li class="toctree-l2"><a class="reference internal" href="antv-use.html">3.4. react中使用antv</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Note</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="webframe.html">3. 前端框架</a> &raquo;</li>
+        
+      <li>3.1. react路由</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/frame/react-router.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="react">
+<h1>3.1. react路由<a class="headerlink" href="#react" title="永久链接至标题">¶</a></h1>
+<p>react路由主要用于当根据用户点击菜单栏中的选项显示不同的界面，切换方式根据改变地址栏中的后缀不同更改除header和footer之外的内容。</p>
+<p><strong>前端框架：React</strong></p>
+<p><strong>UI：antUI</strong></p>
+<p>具体效果图如下：</p>
+<div class="figure">
+<img alt="../_images/react-router0001.png" src="../_images/react-router0001.png" />
+</div>
+<div class="figure">
+<img alt="../_images/react-router0002.png" src="../_images/react-router0002.png" />
+</div>
+<p>使用react路由之前需要在项目环境中安装react-router-dom</p>
+<p>具体操作步骤如下：</p>
+<p><strong>step01</strong> 项目中引入AntUI</p>
+<p><code class="code docutils literal notranslate"><span class="pre">$</span> <span class="pre">npm</span> <span class="pre">install</span> <span class="pre">antd</span> <span class="pre">--save</span></code></p>
+<p>在引入AntUI之后还需要进行一个步骤，否则会导致样式无法加载出来,在App.js中引入样式</p>
+<p><code class="code docutils literal notranslate"><span class="pre">import</span> <span class="pre">'antd/dist/antd.css'</span></code></p>
+<p><strong>step02</strong> 新建一个页面做为项目的顶部导航栏</p>
+<div class="figure">
+<img alt="../_images/react-router0003.png" src="../_images/react-router0003.png" />
+</div>
+<p><strong>step03</strong> 在主页面中引入导航栏</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">HeadNav</span> <span class="kn">from</span> <span class="s1">&#39;../../common/HeadNav&#39;</span>
+<span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;DefaultLayout&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">HeadNav</span> <span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>step04</strong> 创建出对应的子页面</p>
+<p><strong>step05</strong> 在主页面中将各个子页面与相应的地址对应起来</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Route</span> <span class="n">path</span><span class="o">=</span><span class="p">{</span><span class="n">this</span><span class="o">.</span><span class="n">props</span><span class="o">.</span><span class="n">match</span><span class="o">.</span><span class="n">url</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span><span class="p">}</span> <span class="n">component</span><span class="o">=</span><span class="p">{</span><span class="n">Home</span><span class="p">}</span> <span class="n">exact</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Route</span> <span class="n">path</span><span class="o">=</span><span class="p">{</span><span class="n">this</span><span class="o">.</span><span class="n">props</span><span class="o">.</span><span class="n">match</span><span class="o">.</span><span class="n">url</span> <span class="o">+</span> <span class="s2">&quot;/about&quot;</span><span class="p">}</span> <span class="n">component</span><span class="o">=</span><span class="p">{</span><span class="n">About</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Route</span> <span class="n">path</span><span class="o">=</span><span class="p">{</span><span class="n">this</span><span class="o">.</span><span class="n">props</span><span class="o">.</span><span class="n">match</span><span class="o">.</span><span class="n">url</span> <span class="o">+</span> <span class="s2">&quot;/article&quot;</span><span class="p">}</span> <span class="n">component</span><span class="o">=</span><span class="p">{</span><span class="n">Article</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">Route</span> <span class="n">path</span><span class="o">=</span><span class="p">{</span><span class="n">this</span><span class="o">.</span><span class="n">props</span><span class="o">.</span><span class="n">match</span><span class="o">.</span><span class="n">url</span> <span class="o">+</span> <span class="s2">&quot;/resource&quot;</span><span class="p">}</span> <span class="n">component</span><span class="o">=</span><span class="p">{</span><span class="n">Resource</span><span class="p">}</span> <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>子页面应该是从主页面跳转过去的，所以在地址栏中应当为127.0.0.1:8080/home/about，所以在path之后添加了this.props.match.url。</p>
+<p><strong>step06</strong> 在头部页面的各个子菜单的标签中添加&lt;Link&gt;并指明地址，在使用&lt;Link&gt;之前应当在头部引入</p>
+<p><code class="code docutils literal notranslate"><span class="pre">import</span> <span class="pre">{</span> <span class="pre">Link</span> <span class="pre">}</span> <span class="pre">from</span> <span class="pre">'react-router-dom'</span></code></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="react.html" class="btn btn-neutral float-right" title="3.2. React" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="webframe.html" class="btn btn-neutral float-left" title="3. 前端框架" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, ZhangJie
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

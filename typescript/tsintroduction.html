@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>4.1. TypeScript 基础类型 &mdash; Note  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="4. TypeScript" href="tsindex.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Note
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../prototype/prototypeing.html">1. Prototypeing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../productset/productsetchange.html">2. productSet网页修改</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../frame/webframe.html">3. 前端框架</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="tsindex.html">4. TypeScript</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.1. TypeScript 基础类型</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tsintroduction-rst">4.1.1. 布尔值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">4.1.2. 数字</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">4.1.3. 字符串</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">4.1.4. 数组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">4.1.5. 元组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">4.1.6. 枚举</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">4.1.7. 任意值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">4.1.8. 空值</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Note</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="tsindex.html"><span class="section-number">4. </span>TypeScript</a> &raquo;</li>
+        
+      <li><span class="section-number">4.1. </span>TypeScript 基础类型</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/typescript/tsintroduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="typescript">
+<h1><a class="toc-backref" href="#id10"><span class="section-number">4.1. </span>TypeScript 基础类型</a><a class="headerlink" href="#typescript" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2021-04-20</p>
+</dd>
+<dt class="field-even">tags</dt>
+<dd class="field-even"><p>html,JavaScript,typeScript</p>
+</dd>
+</dl>
+<div class="contents topic" id="id1">
+<p class="topic-title">目录</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#typescript" id="id10">TypeScript 基础类型</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tsintroduction-rst" id="id11">布尔值</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id12">数字</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id13">字符串</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id14">数组</a></p></li>
+<li><p><a class="reference internal" href="#id6" id="id15">元组</a></p></li>
+<li><p><a class="reference internal" href="#id7" id="id16">枚举</a></p></li>
+<li><p><a class="reference internal" href="#id8" id="id17">任意值</a></p></li>
+<li><p><a class="reference internal" href="#id9" id="id18">空值</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="tsintroduction-rst">
+<span id="id2"></span><h2><a class="toc-backref" href="#id11"><span class="section-number">4.1.1. </span>布尔值</a><a class="headerlink" href="#tsintroduction-rst" title="永久链接至标题">¶</a></h2>
+<p>最基本的数据类型就是简单的tru/false值，在JavaScript和TypeScript里叫做 <strong>boolean</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">isDone</span><span class="p">:</span> <span class="n">boolean</span> <span class="o">=</span> <span class="n">false</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id12"><span class="section-number">4.1.2. </span>数字</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>和JS一样，TypeScript里的所有数字都是浮点数。这些浮点数的类型是 <strong>number</strong> 。除了支持十进制和十六进制字面量，TS还支持ECMAScript 2015中引入的二进制和八进制字面量:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">decLiteral</span><span class="p">:</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="n">let</span> <span class="n">hexLiteral</span><span class="p">:</span> <span class="n">number</span> <span class="o">=</span> <span class="mh">0xf00d</span><span class="p">;</span>
+<span class="n">let</span> <span class="n">binaryLiteral</span><span class="p">:</span> <span class="n">number</span> <span class="o">=</span> <span class="mb">0b1010</span><span class="p">;</span>
+<span class="n">let</span> <span class="n">octalLiteral</span><span class="p">:</span> <span class="n">number</span> <span class="o">=</span> <span class="mo">0o744</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id13"><span class="section-number">4.1.3. </span>字符串</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>使用单引号或双引号都可以表示字符串:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">name</span><span class="p">:</span> <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;bob&quot;</span><span class="p">;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;smith&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><strong>模板字符串</strong></p>
+<p>字符串被反引号包围（`）,以${str}这种形式嵌入表达式:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>let name: string = `Tom`
+let sentence: string = `my name is ${name}`;
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id14"><span class="section-number">4.1.4. </span>数组</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>有两种方式定义数组</p>
+<blockquote>
+<div><ul>
+<li><p>可以在元素类型后面接上[]，表示由此类型元素组成的一个数组</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="nb">list</span><span class="p">:</span> <span class="n">number</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+</pre></div>
+</div>
+</li>
+<li><p>使用数组泛型，Array&lt;元素类型&gt;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="nb">list</span><span class="p">:</span> <span class="n">Array</span><span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id15"><span class="section-number">4.1.5. </span>元组</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>元组类型允许表示一个已知元素数量和类型的数组，各元素的类型不必相同。比如可以定义一对值分别为string和number类型的元组:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">x</span><span class="p">:</span> <span class="p">[</span><span class="n">string</span><span class="p">,</span><span class="n">number</span><span class="p">];</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">];</span> <span class="o">//</span><span class="n">ok</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">];</span> <span class="o">//</span><span class="n">error</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id16"><span class="section-number">4.1.6. </span>枚举</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>enum类型是对js标准数据类型的一个补充:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">enum</span> <span class="n">Color</span> <span class="p">{</span><span class="n">Red</span><span class="p">,</span><span class="n">Green</span><span class="p">,</span><span class="n">Blue</span><span class="p">}</span>
+<span class="n">let</span> <span class="n">c</span><span class="p">:</span> <span class="n">Color</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">Green</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id17"><span class="section-number">4.1.7. </span>任意值</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<p>对于编程阶段不清楚类型的变量，可以使用any类型来标记这些变量:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">notSure</span><span class="p">:</span> <span class="nb">any</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="n">notSure</span> <span class="o">=</span> <span class="s2">&quot;maybe a string instead&quot;</span><span class="p">;</span>
+<span class="n">notSure</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>同样当一个数组包含了不同的数据类型时，也可以用任意值:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="nb">list</span><span class="p">:</span><span class="nb">any</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;String&quot;</span><span class="p">];</span>
+<span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2><a class="toc-backref" href="#id18"><span class="section-number">4.1.8. </span>空值</a><a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>void类型像是与any类型相反，它表示没有任何类型。当一个函数没有返回值时，通常其返回值类型是void:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">warnUser</span><span class="p">():</span> <span class="n">void</span> <span class="p">{</span>
+   <span class="n">alert</span><span class="p">(</span><span class="s2">&quot;This is my warning message&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tsindex.html" class="btn btn-neutral float-left" title="4. TypeScript" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2019, ZhangJie.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

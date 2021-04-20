@@ -11,3 +11,4 @@
    ./prototype/prototypeing.rst
    ./productset/productsetchange.rst
    ./frame/webframe.rst
+   ./typescript/tsindex.rst

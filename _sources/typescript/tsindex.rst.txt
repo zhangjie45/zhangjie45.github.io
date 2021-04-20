@@ -1,0 +1,11 @@
+.. _tsindex.rst
+
+.. content::
+
+====================
+TypeScript
+====================
+
+.. toctree::
+
+   tsintroduction.rst

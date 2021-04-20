@@ -1,39 +1,42 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>3.1. react路由 &mdash; Note  文档</title>
   
 
   
-  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="3.2. React" href="react.html" />
@@ -74,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -91,11 +95,13 @@
 <li class="toctree-l2"><a class="reference internal" href="antv-use.html">3.4. react中使用antv</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../typescript/tsindex.html">4. TypeScript</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -130,20 +136,22 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="webframe.html">3. 前端框架</a> &raquo;</li>
+          <li><a href="webframe.html"><span class="section-number">3. </span>前端框架</a> &raquo;</li>
         
-      <li>3.1. react路由</li>
+      <li><span class="section-number">3.1. </span>react路由</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/frame/react-router.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -158,15 +166,15 @@
            <div itemprop="articleBody">
             
   <div class="section" id="react">
-<h1>3.1. react路由<a class="headerlink" href="#react" title="永久链接至标题">¶</a></h1>
+<h1><span class="section-number">3.1. </span>react路由<a class="headerlink" href="#react" title="永久链接至标题">¶</a></h1>
 <p>react路由主要用于当根据用户点击菜单栏中的选项显示不同的界面，切换方式根据改变地址栏中的后缀不同更改除header和footer之外的内容。</p>
 <p><strong>前端框架：React</strong></p>
 <p><strong>UI：antUI</strong></p>
 <p>具体效果图如下：</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/react-router0001.png" src="../_images/react-router0001.png" />
 </div>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/react-router0002.png" src="../_images/react-router0002.png" />
 </div>
 <p>使用react路由之前需要在项目环境中安装react-router-dom</p>
@@ -176,7 +184,7 @@
 <p>在引入AntUI之后还需要进行一个步骤，否则会导致样式无法加载出来,在App.js中引入样式</p>
 <p><code class="code docutils literal notranslate"><span class="pre">import</span> <span class="pre">'antd/dist/antd.css'</span></code></p>
 <p><strong>step02</strong> 新建一个页面做为项目的顶部导航栏</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/react-router0003.png" src="../_images/react-router0003.png" />
 </div>
 <p><strong>step03</strong> 在主页面中引入导航栏</p>
@@ -204,29 +212,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="react.html" class="btn btn-neutral float-right" title="3.2. React" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="webframe.html" class="btn btn-neutral float-left" title="3. 前端框架" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="react.html" class="btn btn-neutral float-right" title="3.2. React" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="webframe.html" class="btn btn-neutral float-left" title="3. 前端框架" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, ZhangJie
+        &#169; 版权所有 2019, ZhangJie.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -234,7 +242,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

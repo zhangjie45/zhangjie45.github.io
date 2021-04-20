@@ -1,39 +1,42 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>2.2. React和jQuery评估 &mdash; Note  文档</title>
   
 
   
-  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="3. 前端框架" href="../frame/webframe.html" />
@@ -74,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -99,11 +103,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../frame/webframe.html">3. 前端框架</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../typescript/tsindex.html">4. TypeScript</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -138,20 +144,22 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="productsetchange.html">2. productSet网页修改</a> &raquo;</li>
+          <li><a href="productsetchange.html"><span class="section-number">2. </span>productSet网页修改</a> &raquo;</li>
         
-      <li>2.2. React和jQuery评估</li>
+      <li><span class="section-number">2.2. </span>React和jQuery评估</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/productset/ReactAndjQuery.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -166,40 +174,41 @@
            <div itemprop="articleBody">
             
   <div class="section" id="reactjquery">
-<h1><a class="toc-backref" href="#id6">2.2. React和jQuery评估</a><a class="headerlink" href="#reactjquery" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2019-03</td>
-</tr>
-<tr class="field-even field"><th class="field-name">tags:</th><td class="field-body">React,jQuery</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">authon:</th><td class="field-body">Zhang Jie</td>
-</tr>
-</tbody>
-</table>
+<h1><a class="toc-backref" href="#id6"><span class="section-number">2.2. </span>React和jQuery评估</a><a class="headerlink" href="#reactjquery" title="永久链接至标题">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>2019-03</p>
+</dd>
+<dt class="field-even">tags</dt>
+<dd class="field-even"><p>React,jQuery</p>
+</dd>
+<dt class="field-odd">authon</dt>
+<dd class="field-odd"><p>Zhang Jie</p>
+</dd>
+</dl>
 <div class="contents topic" id="id1">
-<p class="topic-title first">目录</p>
+<p class="topic-title">目录</p>
 <ul class="simple">
-<li><a class="reference internal" href="#reactjquery" id="id6">React和jQuery评估</a><ul>
-<li><a class="reference internal" href="#react" id="id7">React 核心内容</a></li>
-<li><a class="reference internal" href="#jquery" id="id8">jQuery 核心内容</a></li>
-<li><a class="reference internal" href="#id2" id="id9">不同点</a><ul>
-<li><a class="reference internal" href="#id3" id="id10">jQuery</a></li>
-<li><a class="reference internal" href="#id4" id="id11">React</a></li>
+<li><p><a class="reference internal" href="#reactjquery" id="id6">React和jQuery评估</a></p>
+<ul>
+<li><p><a class="reference internal" href="#react" id="id7">React 核心内容</a></p></li>
+<li><p><a class="reference internal" href="#jquery" id="id8">jQuery 核心内容</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id9">不同点</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id3" id="id10">jQuery</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id11">React</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id5" id="id12">总结</a></li>
+<li><p><a class="reference internal" href="#id5" id="id12">总结</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="react">
-<span id="reactandjquery-rst"></span><h2><a class="toc-backref" href="#id7">2.2.1. React 核心内容</a><a class="headerlink" href="#react" title="永久链接至标题">¶</a></h2>
+<span id="reactandjquery-rst"></span><h2><a class="toc-backref" href="#id7"><span class="section-number">2.2.1. </span>React 核心内容</a><a class="headerlink" href="#react" title="永久链接至标题">¶</a></h2>
 <p><strong>组件</strong></p>
 <p>React组件能够像原生的HTML标签一样输出特定的界面元素，并且也能包括一些元素相关逻辑功能的代码。</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">MyComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">MyComponent</span> <span class="k">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
     <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">World</span><span class="o">!&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">;</span>
     <span class="p">}</span>
@@ -208,7 +217,7 @@
 </div>
 <p><strong>JSX</strong></p>
 <p>React框架中推荐使用的一种写法，是Java+XML的缩写，推荐在React中尽量少使用html标签。这样做的好处就是以一种熟悉的语法来定义HTML元素树，让程序结构更容易被直观化。</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">MyComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">MyComponent</span> <span class="k">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
     <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Today</span> <span class="nx">is</span><span class="o">:</span> <span class="p">{</span><span class="k">new</span> <span class="nb">Date</span><span class="p">()}</span><span class="o">&lt;</span><span class="sr">/p&gt;;/</span><span class="o">/</span><span class="nx">使用了</span><span class="p">{}</span> <span class="nx">来显示JS变量</span>
     <span class="p">}</span>
@@ -240,12 +249,13 @@
 <p>React提供的方法，Props和State就是组件API中的一部分，还有经常使用的constructor，同时还提供了按照特定次序触发的生命周期。
 React的生命周期一般会经历三个步骤：</p>
 <ul class="simple">
-<li>装载过程(Mount)：把组件第一次在DOM树中渲染的过程，发生在组件第一次被渲染的时候；</li>
-<li>更新过程(Update)：当组件被重新渲染的过程，当props或者state被修改的时候；</li>
-<li>卸载过程(Unmount)：组件从DOM中删除的过程，当React组件要从DOM树上清掉之前调用。</li>
+<li><p>装载过程(Mount)：把组件第一次在DOM树中渲染的过程，发生在组件第一次被渲染的时候；</p></li>
+<li><p>更新过程(Update)：当组件被重新渲染的过程，当props或者state被修改的时候；</p></li>
+<li><p>卸载过程(Unmount)：组件从DOM中删除的过程，当React组件要从DOM树上清掉之前调用。</p></li>
 </ul>
 <blockquote>
-<div>通过React的生命周期可以从全局观测到组件的各个状态，并做出相应的处理。</div></blockquote>
+<div><p>通过React的生命周期可以从全局观测到组件的各个状态，并做出相应的处理。</p>
+</div></blockquote>
 <p><strong>组件类型</strong></p>
 <p>React中的组件类型一般分为两种，容器组件和展示组件，容器组件主要关注数据交互，展示组件则是主要用来展示或隐藏内容。</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>//presentational component
@@ -290,94 +300,96 @@ class CommentListContainer extends React.Component {
 </div>
 </div>
 <div class="section" id="jquery">
-<h2><a class="toc-backref" href="#id8">2.2.2. jQuery 核心内容</a><a class="headerlink" href="#jquery" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id8"><span class="section-number">2.2.2. </span>jQuery 核心内容</a><a class="headerlink" href="#jquery" title="永久链接至标题">¶</a></h2>
 <p>使用原生的JavaScript操纵方式，以少量的代码去解决问题。</p>
 </div>
 <div class="section" id="id2">
-<h2><a class="toc-backref" href="#id9">2.2.3. 不同点</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id9"><span class="section-number">2.2.3. </span>不同点</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>从本质上来说jQuery是一个js工具类，React是一个js框架。</p>
 <div class="section" id="id3">
-<h3><a class="toc-backref" href="#id10">2.2.3.1. jQuery</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<h3><a class="toc-backref" href="#id10"><span class="section-number">2.2.3.1. </span>jQuery</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <ul>
-<li><p class="first">操作DOM方式</p>
+<li><p>操作DOM方式</p>
 <p><strong>直接操作</strong></p>
 </li>
 </ul>
 <blockquote>
-<div>使用选择器筛选出需要改变的Dom元素，或者直接对某个Dom元素进行监听。最后来直接改变真实Dom来达到预期的结果,流程图如下：</div></blockquote>
-<div class="figure">
+<div><p>使用选择器筛选出需要改变的Dom元素，或者直接对某个Dom元素进行监听。最后来直接改变真实Dom来达到预期的结果,流程图如下：</p>
+</div></blockquote>
+<div class="figure align-default">
 <img alt="../_images/ReactAndJquery0003.png" src="../_images/ReactAndJquery0003.png" />
 </div>
 <p>当页面的功能性不高时，jQuery可以比较直接的解决问题，但是在功能点比较复杂情况下，jQuery不断的去操纵DOM，不断去判断各种情况，造成代码结构复杂，后期难以维护，流程图如下：</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/ReactAndJquery0004.png" src="../_images/ReactAndJquery0004.png" />
 </div>
 <ul>
-<li><p class="first">页面切换</p>
+<li><p>页面切换</p>
 <p>关于页面jQuery采用传统链接的方式，直接访问新的地址，然后通过向后台获取新的数据加载出来。</p>
 </li>
 </ul>
 </div>
 <div class="section" id="id4">
-<h3><a class="toc-backref" href="#id11">2.2.3.2. React</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<h3><a class="toc-backref" href="#id11"><span class="section-number">2.2.3.2. </span>React</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <ul>
-<li><p class="first">操作DOM方式</p>
+<li><p>操作DOM方式</p>
 <p><strong>基于数据驱动，数据决定DOM</strong></p>
 </li>
 </ul>
 <blockquote>
-<div>React是提供了一整套的vistualDom，也就是虚拟Dom，所有的操作都在这个虚拟的Dom上而并非真实的Dom，React默认这个真实的Dom是不会被改变的，被改变的只有虚拟的Dom，然后通过这个虚拟的Dom来对真实的Dom进行渲染,流程图如下：</div></blockquote>
-<div class="figure">
+<div><p>React是提供了一整套的vistualDom，也就是虚拟Dom，所有的操作都在这个虚拟的Dom上而并非真实的Dom，React默认这个真实的Dom是不会被改变的，被改变的只有虚拟的Dom，然后通过这个虚拟的Dom来对真实的Dom进行渲染,流程图如下：</p>
+</div></blockquote>
+<div class="figure align-default">
 <img alt="../_images/ReactAndJquery0001.png" src="../_images/ReactAndJquery0001.png" />
 </div>
 <p>当页面比较复杂时，设计人员只需要关注当前的状态，在不同的状态下去设置相应的表现，这样会使得代码结构较为清晰，易于二次开发，流程图如下：</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/ReactAndJquery0002.png" src="../_images/ReactAndJquery0002.png" />
 </div>
 <ul class="simple">
-<li>页面切换</li>
+<li><p>页面切换</p></li>
 </ul>
 <p>React在页面切换中不是采用传统的连接跳转，严格的说React项目中的内容都呈现在一张HTML中，使用Router，根据链接的地址，获取需要展示的信息然后渲染出来。通俗的讲就是去采购东西，给了一张清单，根据清单来获取相应的物件。</p>
 </div>
 </div>
 <div class="section" id="id5">
-<h2><a class="toc-backref" href="#id12">2.2.4. 总结</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<table border="1" class="colwidths-given docutils">
+<h2><a class="toc-backref" href="#id12"><span class="section-number">2.2.4. </span>总结</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<table class="colwidths-given docutils align-default">
 <colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">&#160;</th>
-<th class="head">jQuery</th>
-<th class="head">React</th>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>jQuery</p></th>
+<th class="head"><p>React</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>本质</td>
-<td>js工具类</td>
-<td>js框架</td>
+<tbody>
+<tr class="row-even"><td><p>本质</p></td>
+<td><p>js工具类</p></td>
+<td><p>js框架</p></td>
 </tr>
-<tr class="row-odd"><td>核心</td>
-<td>简化脚本语言</td>
-<td>元素组件化、虚拟DOM、Diff算法</td>
+<tr class="row-odd"><td><p>核心</p></td>
+<td><p>简化脚本语言</p></td>
+<td><p>元素组件化、虚拟DOM、Diff算法</p></td>
 </tr>
-<tr class="row-even"><td>操作DOM方式</td>
-<td>直接调用</td>
-<td>渲染</td>
+<tr class="row-even"><td><p>操作DOM方式</p></td>
+<td><p>直接调用</p></td>
+<td><p>渲染</p></td>
 </tr>
-<tr class="row-odd"><td>页面跳转</td>
-<td>原生Js</td>
-<td>路由router</td>
+<tr class="row-odd"><td><p>页面跳转</p></td>
+<td><p>原生Js</p></td>
+<td><p>路由router</p></td>
 </tr>
-<tr class="row-even"><td>可阅读性</td>
-<td>很低</td>
-<td>很高</td>
+<tr class="row-even"><td><p>可阅读性</p></td>
+<td><p>很低</p></td>
+<td><p>很高</p></td>
 </tr>
-<tr class="row-odd"><td>后期维护</td>
-<td>困难</td>
-<td>容易</td>
+<tr class="row-odd"><td><p>后期维护</p></td>
+<td><p>困难</p></td>
+<td><p>容易</p></td>
 </tr>
 </tbody>
 </table>
@@ -389,29 +401,29 @@ class CommentListContainer extends React.Component {
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../frame/webframe.html" class="btn btn-neutral float-right" title="3. 前端框架" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="Node.html" class="btn btn-neutral float-left" title="2.1. 记事本" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="../frame/webframe.html" class="btn btn-neutral float-right" title="3. 前端框架" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Node.html" class="btn btn-neutral float-left" title="2.1. 记事本" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, ZhangJie
+        &#169; 版权所有 2019, ZhangJie.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -419,7 +431,6 @@ class CommentListContainer extends React.Component {
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

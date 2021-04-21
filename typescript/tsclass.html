@@ -93,6 +93,9 @@
 <li class="toctree-l2"><a class="reference internal" href="tsinterface.html">4.2. TypeScript 接口</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">4.3. TypeScript 类</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#tsclass-rst">4.3.1. 类</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">4.3.2. 继承</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#readonly">4.3.3. readonly修饰符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">4.3.4. 存取器</a></li>
 </ul>
 </li>
 </ul>
@@ -167,7 +170,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="typescript">
-<h1><a class="toc-backref" href="#id3"><span class="section-number">4.3. </span>TypeScript 类</a><a class="headerlink" href="#typescript" title="永久链接至标题">¶</a></h1>
+<h1><a class="toc-backref" href="#id5"><span class="section-number">4.3. </span>TypeScript 类</a><a class="headerlink" href="#typescript" title="永久链接至标题">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">data</dt>
 <dd class="field-odd"><p>2021-04-21</p>
@@ -179,15 +182,18 @@
 <div class="contents topic" id="id1">
 <p class="topic-title">目录</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#typescript" id="id3">TypeScript 类</a></p>
+<li><p><a class="reference internal" href="#typescript" id="id5">TypeScript 类</a></p>
 <ul>
-<li><p><a class="reference internal" href="#tsclass-rst" id="id4">类</a></p></li>
+<li><p><a class="reference internal" href="#tsclass-rst" id="id6">类</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id7">继承</a></p></li>
+<li><p><a class="reference internal" href="#readonly" id="id8">readonly修饰符</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id9">存取器</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="tsclass-rst">
-<span id="id2"></span><h2><a class="toc-backref" href="#id4"><span class="section-number">4.3.1. </span>类</a><a class="headerlink" href="#tsclass-rst" title="永久链接至标题">¶</a></h2>
+<span id="id2"></span><h2><a class="toc-backref" href="#id6"><span class="section-number">4.3.1. </span>类</a><a class="headerlink" href="#tsclass-rst" title="永久链接至标题">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class Greeter{  //声明了一个Greeter的类,有3个成员变量
    greeting:string;  //一个叫做greeting的属性
    constructor(message:string){  //一个构造函数
@@ -201,6 +207,49 @@
 let greet = new Greeter(&quot;TS&quot;); //使用new构造了greeter类的一个实例，调用之前定义的构造函数，创建一个Greeter类型的新对象，并执行构造函数初始化它
 </pre></div>
 </div>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id7"><span class="section-number">4.3.2. </span>继承</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>新的类可以继承引用和调用extends后面的类里面的方法和属性</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class Animal {
+    move(distanceInMeters: number = 0) {
+        console.log(`Animal moved ${distanceInMeters}m.`);
+    }
+}
+class Dog extends Animal {
+    bark() {
+        console.log(&#39;Woof! Woof!&#39;);
+    }
+}
+const dog = new Dog();
+dog.bark();
+dog.move(10);
+dog.bark();
+</pre></div>
+</div>
+<p>类从基类中继承了属性和方法。 这里，Dog是一个派生类，它派生自Animal基类，通过extends关键字。 派生类通常被称作子类，基类通常被称作超类。</p>
+<p>因为Dog继承了Animal的功能，因此我们可以创建一个Dog的实例，它能够bark()和move()。</p>
+<p><strong>关键字super()</strong></p>
+<p>在派生类中使用关键字super会执行基类的构造函数。</p>
+<p>公共，私有与受保护的修饰符</p>
+<p>在TypeScript里成员都默认为public，也可以明确的将一个成员标记成public</p>
+<p>当成员被标记成private时，他就不能在声明他的类的外部访问:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+ <span class="n">private</span> <span class="n">name</span><span class="p">:</span> <span class="n">string</span><span class="p">;</span>
+ <span class="n">constructor</span><span class="p">(</span><span class="n">theName</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span> <span class="p">{</span> <span class="n">this</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">theName</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">new</span> <span class="n">Animal</span><span class="p">(</span><span class="s2">&quot;Cat&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">;</span> <span class="o">//</span> <span class="n">错误</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span> <span class="n">是私有的</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>producted修饰符与private修饰符的行为很相似，但有一点不同，producted成员在派生类中仍然可以访问</p>
+</div>
+<div class="section" id="readonly">
+<h2><a class="toc-backref" href="#id8"><span class="section-number">4.3.3. </span>readonly修饰符</a><a class="headerlink" href="#readonly" title="永久链接至标题">¶</a></h2>
+<p>使用readonly关键字将属性设置为只读的，只读属性必须在声明时或构造函数里被初始化。</p>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id9"><span class="section-number">4.3.4. </span>存取器</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>和java中的get、set方法很相似，通过getters/setters来截取对对象的访问</p>
 </div>
 </div>
 

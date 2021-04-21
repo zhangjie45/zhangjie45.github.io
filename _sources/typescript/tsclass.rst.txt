@@ -25,3 +25,59 @@ TypeScript 类
    }
    
    let greet = new Greeter("TS"); //使用new构造了greeter类的一个实例，调用之前定义的构造函数，创建一个Greeter类型的新对象，并执行构造函数初始化它
+
+继承
+^^^^^^^^^
+
+新的类可以继承引用和调用extends后面的类里面的方法和属性
+
+::
+
+   class Animal {
+       move(distanceInMeters: number = 0) {
+           console.log(`Animal moved ${distanceInMeters}m.`);
+       }
+   }
+   class Dog extends Animal {
+       bark() {
+           console.log('Woof! Woof!');
+       }
+   }
+   const dog = new Dog();
+   dog.bark();
+   dog.move(10);
+   dog.bark();
+
+类从基类中继承了属性和方法。 这里，Dog是一个派生类，它派生自Animal基类，通过extends关键字。 派生类通常被称作子类，基类通常被称作超类。
+
+因为Dog继承了Animal的功能，因此我们可以创建一个Dog的实例，它能够bark()和move()。
+
+**关键字super()**
+
+在派生类中使用关键字super会执行基类的构造函数。
+
+
+公共，私有与受保护的修饰符
+
+在TypeScript里成员都默认为public，也可以明确的将一个成员标记成public
+
+当成员被标记成private时，他就不能在声明他的类的外部访问::
+
+   class Animal {
+    private name: string;
+    constructor(theName: string) { this.name = theName; }
+   }
+   new Animal("Cat").name; // 错误: 'name' 是私有的.
+
+producted修饰符与private修饰符的行为很相似，但有一点不同，producted成员在派生类中仍然可以访问
+
+readonly修饰符
+^^^^^^^^^^^^^^^^^
+
+使用readonly关键字将属性设置为只读的，只读属性必须在声明时或构造函数里被初始化。
+
+
+存取器
+^^^^^^^^
+
+和java中的get、set方法很相似，通过getters/setters来截取对对象的访问

@@ -1,0 +1,27 @@
+TypeScript 类
+====================
+
+:data: 2021-04-21
+:tags: html,JavaScript,typeScript
+
+
+.. contents::
+
+.. _tsclass_rst:
+
+类
+^^^^^^
+
+::
+
+   class Greeter{  //声明了一个Greeter的类,有3个成员变量
+      greeting:string;  //一个叫做greeting的属性
+      constructor(message:string){  //一个构造函数
+          this.greeting = message;  //引用任何一个类成员的时候都用了this，表示访问的是类的成员
+      }
+      greet(){   //一个greet方法
+           return "Hello,"+this.greeting;
+      }
+   }
+   
+   let greet = new Greeter("TS"); //使用new构造了greeter类的一个实例，调用之前定义的构造函数，创建一个Greeter类型的新对象，并执行构造函数初始化它

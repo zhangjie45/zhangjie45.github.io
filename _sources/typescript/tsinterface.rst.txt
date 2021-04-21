@@ -1,0 +1,33 @@
+TypeScript 接口
+====================
+
+:data: 2021-04-20
+:tags: html,JavaScript,typeScript
+
+
+.. contents::
+
+.. _tsinterface_rst:
+
+接口
+^^^^^^^
+
+ts中的接口和java中的实体类比较相似，当一个参数是object类型时，可以新建一个接口，专门用来规定这个参数中数据的类型，然后在对应的函数中传入这个接口
+
+可选属性
+^^^^^^^^^^
+这些接口中的参数可以定义为可选（用? 表示）：及接口中的属性不是全部必须::
+
+   interface name{
+      width?:number;
+      height?:number;
+   }
+
+只读属性
+^^^^^^^^^^
+只读属性，只能在刚创建时修改属性的值，用readonly表示::
+
+   interface name{
+        readonly x:number;
+        readonly y:number;
+   }

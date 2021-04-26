@@ -1,0 +1,140 @@
+前端面试知识点
+=================
+
+:data: 2021-04-26
+:tags: 面试、前端
+
+.. contents::
+
+.. _ivweb_rst:
+
+掘金
+^^^^^^^^^^
+
+https
+----------------
+
+https与http区别：
+
+.. figure:: /_static/img/interview/iv00001.png
+
+https比http多了一层SSL/TLS
+
+SSL:（Secure Socket Layer， 安全套接字)
+
+TLS：(Transport Layer Security, 传输层安全)
+
+**https工作原理**
+
+   1. 客户端使用https的url访问web服务器，要求于服务器建立ssl链接
+   #. web服务器收到客户端请求后，会将网站的证书（包含公钥）传送一份给客户端
+   #. 客户端收到网站证书之后会检查证书的颁发机构以及过期时间，如果没有问题就随机产生一个密钥
+   #. 客户端利用公钥将会话密钥加密，并传送给服务端，服务端利用自己的私钥解密出会话密钥
+   #. 之后服务器与客户端使用密钥加密传输
+
+.. figure:: /_static/img/interview/iv00002.png
+
+网络安全
+----------------
+
+**xss**
+
+跨站脚本攻击
+
+出现原因：信任客户端提交的所有数据
+
+解决方法: 不信任客户端提交的数据，只要是客户端提交的数据就要先进行相应的过滤，比如斜杠、尖括号、特殊字符
+
+   1. 转义字符
+   #. CSP（内容安全策略）本质就是建立白名单，开发者明确告诉浏览器哪些外部资源可以加载和执行，我们只需要配置规则，如何拦截是由浏览器自己实现的，通过这种方式可以尽量减少XSS攻击
+
+
+**CSRF**
+
+跨站请求伪造，通过伪装成信任用户的请求来利用受信任的网站
+
+解决方法：
+
+   1. GET请求不对数据进行修改
+   #. 不让第三方网站访问到Cookie
+   #. 阻止第三方网站请求
+   #. 请求时附带验证信息，比如验证码或者Token
+
+SameSite：对Cookie设置SameSite属性，表示Cookie不随着跨域请求发送。*不是所有的浏览器都支持*
+
+验证Referer HTTP头部：通过Referer判断请求是否为第三方网站发起
+
+Token服务端核对令牌：服务器随机下发一个令牌Token，客户端每次请求时将Token带上，服务器验证Token是否有效
+
+验证码
+
+缓存方式
+--------------------
+
+强缓存、协商缓存，
+
+强缓存会直接去取缓存的文件（一般js、css等静态资源）；
+
+协商缓存会像服务器发送一次确认文档是否有效的请求（html走协商缓存，没有hash）
+
+跨域方式
+----------
+
+   - jsonp（只支持get请求，支持老的IE浏览器）适合加载不同域名的js、css，img等静态资源；
+   - CORS（支持所有类型的HTTP请求，但浏览器IE10以下不支持）适合做ajax各种跨域请求；
+   - Nginx代理跨域和nodejs中间件跨域原理都相似，都是搭建一个服务器，直接在服务器端请求HTTP接口，这适合前后端分离的前端项目调后端接口。
+   - document.domain+iframe适合主域名相同，子域名不同的跨域请求。
+   - postMessage、websocket都是HTML5新特性，兼容性不是很好，只适用于主流浏览器和IE10+。
+
+TCP 三次握手和四次挥手
+--------------------------
+
+**三次握手**
+
+   - 客户端：我要连接你
+   - 服务器：好的，你来连吧
+   - 客户端：好的，我来了 
+
+**四次挥手**
+
+   - 客户端：我要关闭输入通道了。
+
+   - 服务端：好的，你关闭吧，我这边也关闭这个通道。
+
+   - 服务端：我也要关闭输入通道了。
+
+   - 客户端：好的你关闭吧，我也把这个通道关闭。
+
+
+Promise
+-------------
+
+异步调用：是指可以一起执行多个任务，不会造成线程阻塞
+
+手写Promise（简易版）
+
+::
+
+   function myPromise(fn){
+      this.cbs = [];
+      const resolve  = (value) => {
+         setTimeOut(() => {
+            this.data = value;
+            this.cbs.forEach((cb) => cb(value));
+         })
+      }
+      fn(resolve);
+   }
+   myPromise.prototype.then = function (onResolved){
+      return new myPromise((resolve) => {
+         this.cbs.push(()=>{
+            const res = onResolved(this.data);
+            if(res instanceof myPromise){
+               res.then(resolve);
+            }else{
+               resolve(res);
+            }
+         });
+      });
+   }
+   export default myPromise;

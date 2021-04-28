@@ -98,6 +98,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#id6">5.1.1.4. 跨域方式</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tcp">5.1.1.5. TCP 三次握手和四次挥手</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#promise">5.1.1.6. Promise</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">5.1.1.7. 深拷贝与浅拷贝</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mapobject">5.1.1.8. Map和Object的区别</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#js">5.1.1.9. JS 遍历数组</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">5.1.1.10. 水平居中、垂直居中</a></li>
 </ul>
 </li>
 </ul>
@@ -174,7 +178,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1><a class="toc-backref" href="#id7"><span class="section-number">5.1. </span>前端面试知识点</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1><a class="toc-backref" href="#id9"><span class="section-number">5.1. </span>前端面试知识点</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">data</dt>
 <dd class="field-odd"><p>2021-04-26</p>
@@ -186,16 +190,20 @@
 <div class="contents topic" id="id2">
 <p class="topic-title">目录</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#id1" id="id7">前端面试知识点</a></p>
+<li><p><a class="reference internal" href="#id1" id="id9">前端面试知识点</a></p>
 <ul>
-<li><p><a class="reference internal" href="#ivweb-rst" id="id8">掘金</a></p>
+<li><p><a class="reference internal" href="#ivweb-rst" id="id10">掘金</a></p>
 <ul>
-<li><p><a class="reference internal" href="#https" id="id9">https</a></p></li>
-<li><p><a class="reference internal" href="#id4" id="id10">网络安全</a></p></li>
-<li><p><a class="reference internal" href="#id5" id="id11">缓存方式</a></p></li>
-<li><p><a class="reference internal" href="#id6" id="id12">跨域方式</a></p></li>
-<li><p><a class="reference internal" href="#tcp" id="id13">TCP 三次握手和四次挥手</a></p></li>
-<li><p><a class="reference internal" href="#promise" id="id14">Promise</a></p></li>
+<li><p><a class="reference internal" href="#https" id="id11">https</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id12">网络安全</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id13">缓存方式</a></p></li>
+<li><p><a class="reference internal" href="#id6" id="id14">跨域方式</a></p></li>
+<li><p><a class="reference internal" href="#tcp" id="id15">TCP 三次握手和四次挥手</a></p></li>
+<li><p><a class="reference internal" href="#promise" id="id16">Promise</a></p></li>
+<li><p><a class="reference internal" href="#id7" id="id17">深拷贝与浅拷贝</a></p></li>
+<li><p><a class="reference internal" href="#mapobject" id="id18">Map和Object的区别</a></p></li>
+<li><p><a class="reference internal" href="#js" id="id19">JS 遍历数组</a></p></li>
+<li><p><a class="reference internal" href="#id8" id="id20">水平居中、垂直居中</a></p></li>
 </ul>
 </li>
 </ul>
@@ -203,9 +211,9 @@
 </ul>
 </div>
 <div class="section" id="ivweb-rst">
-<span id="id3"></span><h2><a class="toc-backref" href="#id8"><span class="section-number">5.1.1. </span>掘金</a><a class="headerlink" href="#ivweb-rst" title="永久链接至标题">¶</a></h2>
+<span id="id3"></span><h2><a class="toc-backref" href="#id10"><span class="section-number">5.1.1. </span>掘金</a><a class="headerlink" href="#ivweb-rst" title="永久链接至标题">¶</a></h2>
 <div class="section" id="https">
-<h3><a class="toc-backref" href="#id9"><span class="section-number">5.1.1.1. </span>https</a><a class="headerlink" href="#https" title="永久链接至标题">¶</a></h3>
+<h3><a class="toc-backref" href="#id11"><span class="section-number">5.1.1.1. </span>https</a><a class="headerlink" href="#https" title="永久链接至标题">¶</a></h3>
 <p>https与http区别：</p>
 <div class="figure align-default">
 <img alt="../_images/iv00001.png" src="../_images/iv00001.png" />
@@ -228,7 +236,7 @@
 </div>
 </div>
 <div class="section" id="id4">
-<h3><a class="toc-backref" href="#id10"><span class="section-number">5.1.1.2. </span>网络安全</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<h3><a class="toc-backref" href="#id12"><span class="section-number">5.1.1.2. </span>网络安全</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p><strong>xss</strong></p>
 <p>跨站脚本攻击</p>
 <p>出现原因：信任客户端提交的所有数据</p>
@@ -256,13 +264,13 @@
 <p>验证码</p>
 </div>
 <div class="section" id="id5">
-<h3><a class="toc-backref" href="#id11"><span class="section-number">5.1.1.3. </span>缓存方式</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<h3><a class="toc-backref" href="#id13"><span class="section-number">5.1.1.3. </span>缓存方式</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>强缓存、协商缓存，</p>
 <p>强缓存会直接去取缓存的文件（一般js、css等静态资源）；</p>
 <p>协商缓存会像服务器发送一次确认文档是否有效的请求（html走协商缓存，没有hash）</p>
 </div>
 <div class="section" id="id6">
-<h3><a class="toc-backref" href="#id12"><span class="section-number">5.1.1.4. </span>跨域方式</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<h3><a class="toc-backref" href="#id14"><span class="section-number">5.1.1.4. </span>跨域方式</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>jsonp（只支持get请求，支持老的IE浏览器）适合加载不同域名的js、css，img等静态资源；</p></li>
@@ -274,7 +282,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="tcp">
-<h3><a class="toc-backref" href="#id13"><span class="section-number">5.1.1.5. </span>TCP 三次握手和四次挥手</a><a class="headerlink" href="#tcp" title="永久链接至标题">¶</a></h3>
+<h3><a class="toc-backref" href="#id15"><span class="section-number">5.1.1.5. </span>TCP 三次握手和四次挥手</a><a class="headerlink" href="#tcp" title="永久链接至标题">¶</a></h3>
 <p><strong>三次握手</strong></p>
 <blockquote>
 <div><ul class="simple">
@@ -294,7 +302,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="promise">
-<h3><a class="toc-backref" href="#id14"><span class="section-number">5.1.1.6. </span>Promise</a><a class="headerlink" href="#promise" title="永久链接至标题">¶</a></h3>
+<h3><a class="toc-backref" href="#id16"><span class="section-number">5.1.1.6. </span>Promise</a><a class="headerlink" href="#promise" title="永久链接至标题">¶</a></h3>
 <p>异步调用：是指可以一起执行多个任务，不会造成线程阻塞</p>
 <p>手写Promise（简易版）</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">myPromise</span><span class="p">(</span><span class="n">fn</span><span class="p">){</span>
@@ -322,6 +330,94 @@
 <span class="n">export</span> <span class="n">default</span> <span class="n">myPromise</span><span class="p">;</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="id7">
+<h3><a class="toc-backref" href="#id17"><span class="section-number">5.1.1.7. </span>深拷贝与浅拷贝</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>假设B复制了A，修改A的时候，看B是否发生了变化：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>如果B跟着也变了，说明是浅拷贝，拿人手短（修改堆内存中的同一个值）</p></li>
+<li><p>如果B没有改变，说明是深拷贝，自食其力(修改堆内存中的不同的值)</p></li>
+</ul>
+</div></blockquote>
+<p>浅拷贝是增加了一个指针指向已存在的内存地址</p>
+<p>深拷贝是增加了一个指针并且申请了一个新的内存，使这个增加的指针指向这个新的内存</p>
+<p>浅拷贝中当讲A复制给B时，其实复制的是A的栈地址，这是B和A同时指向的是同一个堆内存，这个时候发生B做出修改，其实相当于也修改了A指向的堆内存</p>
+<p><strong>深复制和浅复制只针对像 Object, Array 这样的复杂对象的。简单来说，浅复制只复制一层对象的属性，而深复制则递归复制了所有层级</strong></p>
+</div>
+<div class="section" id="mapobject">
+<h3><a class="toc-backref" href="#id18"><span class="section-number">5.1.1.8. </span>Map和Object的区别</a><a class="headerlink" href="#mapobject" title="永久链接至标题">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Object的本质上是哈希结构的键值对的集合，它只能用字符串、数字或者Symbol等简单数据类型当作键</p></li>
+<li><p>Map类继承了Object，并对Object功能做了一些拓展，Map的键可以是任意的数据类型</p></li>
+</ul>
+</div></blockquote>
+<p><strong>同名碰撞</strong>：同样的添加多个key值相同的键值对，map会将这些键值对全部保留，Object会保留这些相同键值对的最后一个</p>
+<p>Map可以直接拿到长度，Object不行</p>
+<p>填入Map的元素会保持原有的顺序，而Object无法做到，Object按照字符串排序，数字在前面</p>
+<p>Map可以用省略号语法展开</p>
+</div>
+<div class="section" id="js">
+<h3><a class="toc-backref" href="#id19"><span class="section-number">5.1.1.9. </span>JS 遍历数组</a><a class="headerlink" href="#js" title="永久链接至标题">¶</a></h3>
+<p>遍历数组有多种方式，传统的for循环、升级版的for in 循环、Array类型的forEach()方法，如果希望遍历对象的键名，还可以使用keys()方法</p>
+<p><strong>for和for in比较</strong></p>
+<p>for语句需要配合length属性和数组下标来实现，执行效率没有for in语句高，另外for in语句会跳过空元素。</p>
+<p><em>对于超长数组来说，建议使用for in</em></p>
+<p><strong>forEach</strong></p>
+<p>不支持break；</p>
+</div>
+<div class="section" id="id8">
+<h3><a class="toc-backref" href="#id20"><span class="section-number">5.1.1.10. </span>水平居中、垂直居中</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p><strong>水平居中</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>行内元素（子元素是&lt;span&gt;）</p>
+<ul class="simple">
+<li><p>父元素是块元素  text-align:center</p></li>
+<li><p>父元素不是块元素 先设置父元素为块元素 display:block text-alig:center</p></li>
+</ul>
+</li>
+<li><p>块元素（&lt;div&gt;）</p>
+<ul class="simple">
+<li><p>宽度确定 magin:auto 0</p></li>
+<li><p>宽度不定 子元素：display:inlineinline-block  父元素：text-align：center</p></li>
+<li><p>父元素相对定位 子元素绝对定位 子元素：left:50% margin-left:-宽度一半 或者transfrom:translateX(-50%)</p></li>
+<li><p>使用flexbox布局 父元素：display:flex justify-content:center</p></li>
+</ul>
+</li>
+</ol>
+</div></blockquote>
+<p><strong>垂直居中</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>单行行内元素：子元素 ling-hight:父元素行高</p></li>
+<li><p>多行行内元素：父元素 display:table-cell vertical-align:middle</p></li>
+<li><p>块级元素</p>
+<ul class="simple">
+<li><p>父元素相对定位 子元素绝对定位 子元素 top:50% margin-top:-高度一半 或者 transfrom:translateY(-50%)</p></li>
+<li><p>使用flexbox布局 父元素 display:flex align-item:center</p></li>
+</ul>
+</li>
+</ol>
+</div></blockquote>
+<p><strong>水平垂直居中</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>已知高度宽度</p>
+<ul class="simple">
+<li><p>父元素相对定位，子元素绝对定位，top:0,left:0,right:0,bottom:0,margin:auto</p></li>
+<li><p>父元素相对定位，子元素绝对定位，left:50%,top:50%,margin-left:-宽度一半，margin-top:-高度一半</p></li>
+</ul>
+</li>
+<li><p>未知高度宽度</p>
+<ul class="simple">
+<li><p>父元素相对定位，子元素绝对定位，left:50%,top:50%,transfrom:translateX(-50%),transfrom:translateY(-50%)</p></li>
+<li><p>flexbox布局 父元素display:flex,justify-content:center,align-items:center,</p></li>
+</ul>
+</li>
+</ol>
+</div></blockquote>
 </div>
 </div>
 </div>

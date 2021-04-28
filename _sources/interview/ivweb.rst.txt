@@ -138,3 +138,88 @@ Promise
       });
    }
    export default myPromise;
+
+深拷贝与浅拷贝
+-----------------------
+
+假设B复制了A，修改A的时候，看B是否发生了变化：
+  
+   - 如果B跟着也变了，说明是浅拷贝，拿人手短（修改堆内存中的同一个值）
+   - 如果B没有改变，说明是深拷贝，自食其力(修改堆内存中的不同的值)
+
+浅拷贝是增加了一个指针指向已存在的内存地址
+
+深拷贝是增加了一个指针并且申请了一个新的内存，使这个增加的指针指向这个新的内存
+
+浅拷贝中当讲A复制给B时，其实复制的是A的栈地址，这是B和A同时指向的是同一个堆内存，这个时候发生B做出修改，其实相当于也修改了A指向的堆内存
+
+**深复制和浅复制只针对像 Object, Array 这样的复杂对象的。简单来说，浅复制只复制一层对象的属性，而深复制则递归复制了所有层级**
+
+
+Map和Object的区别
+------------------
+
+   - Object的本质上是哈希结构的键值对的集合，它只能用字符串、数字或者Symbol等简单数据类型当作键
+   - Map类继承了Object，并对Object功能做了一些拓展，Map的键可以是任意的数据类型
+
+**同名碰撞**：同样的添加多个key值相同的键值对，map会将这些键值对全部保留，Object会保留这些相同键值对的最后一个
+
+Map可以直接拿到长度，Object不行
+
+填入Map的元素会保持原有的顺序，而Object无法做到，Object按照字符串排序，数字在前面
+
+Map可以用省略号语法展开
+
+JS 遍历数组
+--------------
+
+遍历数组有多种方式，传统的for循环、升级版的for in 循环、Array类型的forEach()方法，如果希望遍历对象的键名，还可以使用keys()方法
+
+
+**for和for in比较**
+
+for语句需要配合length属性和数组下标来实现，执行效率没有for in语句高，另外for in语句会跳过空元素。
+
+*对于超长数组来说，建议使用for in*
+
+**forEach**
+
+不支持break；
+
+水平居中、垂直居中
+------------------
+
+**水平居中**
+
+   1. 行内元素（子元素是<span>）
+
+      - 父元素是块元素  text-align:center
+      - 父元素不是块元素 先设置父元素为块元素 display:block text-alig:center
+  
+   #. 块元素（<div>）
+
+      - 宽度确定 magin:auto 0
+      - 宽度不定 子元素：display:inline\inline-block  父元素：text-align：center
+      - 父元素相对定位 子元素绝对定位 子元素：left:50% margin-left:-宽度一半 或者transfrom:translateX(-50%)
+      - 使用flexbox布局 父元素：display:flex justify-content:center
+
+**垂直居中**
+
+   1. 单行行内元素：子元素 ling-hight:父元素行高
+   #. 多行行内元素：父元素 display:table-cell vertical-align:middle
+   #. 块级元素
+
+      - 父元素相对定位 子元素绝对定位 子元素 top:50% margin-top:-高度一半 或者 transfrom:translateY(-50%)
+      - 使用flexbox布局 父元素 display:flex align-item:center
+
+**水平垂直居中**
+   
+   1. 已知高度宽度
+
+      - 父元素相对定位，子元素绝对定位，top:0,left:0,right:0,bottom:0,margin:auto
+      - 父元素相对定位，子元素绝对定位，left:50%,top:50%,margin-left:-宽度一半，margin-top:-高度一半
+   
+   #. 未知高度宽度
+
+      - 父元素相对定位，子元素绝对定位，left:50%,top:50%,transfrom:translateX(-50%),transfrom:translateY(-50%)
+      - flexbox布局 父元素display:flex,justify-content:center,align-items:center,

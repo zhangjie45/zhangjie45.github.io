@@ -426,6 +426,17 @@
 <blockquote>
 <div><p><strong>localStorage</strong></p>
 <p>主要用于解决cookie的存储问题（每个cookie的内容最高不能超过4K），localStorage也是有空间限制的，谷歌浏览器（chrome）每个域名的容量是5M大小</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>生命周期</p></li>
+</ul>
+<p>localStorage的生命周期是永久性的。即使关闭浏览器，数据也不会清空，需要主动去销毁。</p>
+<p><strong>设置本地存储的键与值</strong></p>
+<p>如果存储的数据是object、array，我们需要先使用JSON.parse,把数据转成JSON对象，再使用JSON.stringify这个方法把JSON转成string存放到localStorage中</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">localStorage</span><span class="o">.</span><span class="n">setItem</span><span class="p">(</span><span class="s1">&#39;app&#39;</span><span class="p">,</span><span class="s1">&#39;123&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
 <p><strong>sessionStorage</strong></p>
 </div></blockquote>
 </div>

@@ -223,3 +223,13 @@ for语句需要配合length属性和数组下标来实现，执行效率没有fo
 
       - 父元素相对定位，子元素绝对定位，left:50%,top:50%,transfrom:translateX(-50%),transfrom:translateY(-50%)
       - flexbox布局 父元素display:flex,justify-content:center,align-items:center,
+
+WEB中的本地存储
+-----------------
+
+   **localStorage**
+
+   主要用于解决cookie的存储问题（每个cookie的内容最高不能超过4K），localStorage也是有空间限制的，谷歌浏览器（chrome）每个域名的容量是5M大小
+
+
+   **sessionStorage**
